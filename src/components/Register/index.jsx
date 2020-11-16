@@ -1,8 +1,8 @@
 import React from 'react'
 import '../Login/style.css'
 import firebase from '../../firebase'
-import history from '../../history'
-import {Link, withRouter} from 'react-router-dom'
+//import history from '../../history'
+import {withRouter} from 'react-router-dom'
 
 
 

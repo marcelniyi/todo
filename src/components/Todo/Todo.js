@@ -113,7 +113,7 @@ class Todo extends React.Component {
                           <div key={index} className="task-wrapper flex-wrapper">
                             <div onClick={() => self.strikeUnstrike(task.title, task.completed)} style={{flex:7}}>
 
-                                {task.completed == false ? (
+                                {task.completed === false ? (
                                     <span>{task.title}</span>
 
                                   ) : (
