@@ -12,16 +12,18 @@ class Todo extends React.Component {
           title:'',
           completed:false,
           editing:false,
+          user: localStorage.getItem("user")
       }
       this.handleSubmit = this.handleSubmit.bind(this)
   };
 
   componentWillMount(){
-    this.fetchTasks()
+    this.fetchTasks();
+    this.checkLogin();
   }
 
   fetchTasks = async () =>{
-    const todos = await firebase.firestore().collection('todos').get();
+    const todos = await firebase.firestore().collection('todos').where('user','==', this.state.user).get();
     const result = todos.docs.map((item) => item.data());
     this.setState({
       todoList:result
@@ -33,7 +35,8 @@ class Todo extends React.Component {
     firebase.firestore().collection('todos').add({
       id:'ID#_' + Math.random().toString(36).substr(2, 9),
       title: this.state.title,
-      completed: false
+      completed: false,
+      user: this.state.user
     }).then(() =>
       this.fetchTasks()
     )
@@ -53,8 +56,7 @@ class Todo extends React.Component {
 
 
    deleteItem(todo){
-
-     var query = firebase.firestore().collection('todos').where('title','==',todo);
+     var query = firebase.firestore().collection('todos').where('id','==',todo);
       query.get().then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
           doc.ref.delete();
@@ -66,23 +68,31 @@ class Todo extends React.Component {
 
    strikeUnstrike(todo, state){
      console.log(!state);
-     var query = firebase.firestore().collection('todos').where('title','==',todo);
+     var query = firebase.firestore().collection('todos').where('id','==',todo);
       query.get().then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
-          doc.ref.set({title: todo, completed: !state});
+          doc.ref.update('completed', !state);
         });
 
       });
       this.fetchTasks();
    }
 
-
+   checkLogin() {
+     const user = localStorage.getItem("user");
+     console.log(user)
+     if(user !== null){
+      this.setState({ user: user })
+     }else{
+      this.props.history.replace('/')
+     }
+   }
 
 
 
   render(){
     var tasks = this.state.todoList;
-    console.log(tasks.length);
+    //alert(this.state.user)
     var self = this
     return(
 
@@ -111,7 +121,7 @@ class Todo extends React.Component {
                       return(
 
                           <div key={index} className="task-wrapper flex-wrapper">
-                            <div onClick={() => self.strikeUnstrike(task.title, task.completed)} style={{flex:7}}>
+                            <div onClick={() => self.strikeUnstrike(task.id, task.completed)} style={{flex:7}}>
 
                                 {task.completed === false ? (
                                     <span>{task.title}</span>
@@ -122,13 +132,12 @@ class Todo extends React.Component {
                                   )}
 
                             </div>
-
                             <div style={{flex:1}}>
                                 <button onClick={() => self.startEdit(task)} className="btn btn-sm btn-outline-info">Edit</button>
                             </div>
 
                             <div style={{flex:1}}>
-                                <button onClick={() => self.deleteItem(task.title)} className="btn btn-sm btn-outline-dark delete">-</button>
+                                <button onClick={() => self.deleteItem(task.id)} className="btn btn-sm btn-outline-dark delete">-</button>
                             </div>
 
                           </div>
