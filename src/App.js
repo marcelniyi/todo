@@ -2,7 +2,7 @@ import React from 'react'
 import Todo from './components/Todo/Todo'
 import SignIn from './components/Login'
 import Register from './components/Register'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {Router, Route, Switch} from 'react-router-dom'
 import history from './history';
 
 
