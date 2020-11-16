@@ -16,6 +16,10 @@ class SingIn extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.authListener();
+  }
+
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -24,10 +28,25 @@ class SingIn extends React.Component {
     e.preventDefault();
     await firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
       console.log('success', 'Signed-up successfully!');
+      console.log(u.uid)
       this.props.history.replace('/home')
     }).catch((error) => {
         alert(error);
       });
+  }
+
+  authListener() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        
+        localStorage.setItem('user', user.uid);
+        console.log(user.uid)
+        this.props.history.replace('/home')
+      } else {
+        this.setState({ user: null });
+        localStorage.removeItem('user');
+      }
+    });
   }
 
 
