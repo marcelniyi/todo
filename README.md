@@ -7,6 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [![Coverage Status](https://coveralls.io/repos/github/atlp-rwanda/space-bn-frontend/badge.svg?branch=ch-Run-code-climate-test-coverage-%23175743398)](https://coveralls.io/github/atlp-rwanda/space-bn-frontend?branch=ch-Run-code-climate-test-coverage-%23175743398)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/8c4ce0aa0624a70efa00/maintainability)](https://codeclimate.com/github/atlp-rwanda/space-bn-frontend/maintainability)
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
