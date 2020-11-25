@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/8c4ce0aa0624a70efa00/maintainability)](https://codeclimate.com/github/atlp-rwanda/space-bn-frontend/maintainability)
 
-
+[![Test Coverage](https://api.codeclimate.com/v1/badges/8c4ce0aa0624a70efa00/test_coverage)](https://codeclimate.com/github/atlp-rwanda/space-bn-frontend/test_coverage)
 
 ## Available Scripts
 
