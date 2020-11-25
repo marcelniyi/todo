@@ -1,9 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![Build Status](https://travis-ci.com/atlp-rwanda/space-bn-frontend.svg?token=4Sgyehp7cTzjJk1VXM9q&branch=develop)](https://travis-ci.com/atlp-rwanda/space-bn-frontend)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/3e39005045bb20a11483/maintainability)](https://codeclimate.com/github/ConstantineMaliza/codeclimate/maintainability)
-<a href=“https://codeclimate.com/github/atlp-rwanda/space-bn-frontend/test_coverage”><img src=“https://api.codeclimate.com/v1/badges/8c4ce0aa0624a70efa00/test_coverage” /></a>
+[![Build Status](https://travis-ci.com/atlp-rwanda/space-bn-frontend.svg?token=zEupCAtsZqdSGJp8Hjbd&branch=develop)](https://travis-ci.com/atlp-rwanda/space-bn-frontend)
 
 [![Coverage Status](https://coveralls.io/repos/github/atlp-rwanda/space-bn-frontend/badge.svg?branch=ch-Run-code-climate-test-coverage-%23175743398)](https://coveralls.io/github/atlp-rwanda/space-bn-frontend?branch=ch-Run-code-climate-test-coverage-%23175743398)
 
