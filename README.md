@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [![Build Status](https://travis-ci.com/atlp-rwanda/space-bn-frontend.svg?token=4Sgyehp7cTzjJk1VXM9q&branch=develop)](https://travis-ci.com/atlp-rwanda/space-bn-frontend)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/247e7f9b84e190d7c584/maintainability)](https://codeclimate.com/github/atlp-rwanda/space-bn-frontend/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/3e39005045bb20a11483/maintainability)](https://codeclimate.com/github/marcelniyi/codeclimate/maintainability)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/247e7f9b84e190d7c584/test_coverage)](https://codeclimate.com/github/atlp-rwanda/space-bn-frontend/test_coverage)
 
