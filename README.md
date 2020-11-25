@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/3e39005045bb20a11483/maintainability)](https://codeclimate.com/github/ConstantineMaliza/codeclimate/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/247e7f9b84e190d7c584/test_coverage)](https://codeclimate.com/github/atlp-rwanda/space-bn-frontend/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/247e7f9b84e190d7c584/test_coverage)](https://codeclimate.com/github/ConstantineMaliza/atlp-rwanda/space-bn-frontend/test_coverage)
 
 [![Coverage Status](https://coveralls.io/repos/github/atlp-rwanda/space-bn-frontend/badge.svg?branch=ch-Run-code-climate-test-coverage-%23175743398)](https://coveralls.io/github/atlp-rwanda/space-bn-frontend?branch=ch-Run-code-climate-test-coverage-%23175743398)
 
